@@ -1,0 +1,156 @@
+.site__footer {
+  background-color: $dark-green;
+}
+
+.site__footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 48px 20px;
+}
+
+.footer__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__left {
+  .nav__list {
+    max-width: 500px;
+    display: flex;
+    margin-right: 0;
+    flex-wrap: wrap;
+  }
+}
+
+.footer__logo {
+  flex-shrink: 0;
+  margin-bottom: 25px;
+}
+
+.footer__info {
+  margin-left: 125px;
+}
+
+.info__text {
+  margin: 0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.info__text+.info__text {
+  margin-top: 3px;
+}
+
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: auto;
+}
+
+.social-networks {
+  display: flex;
+  align-items: center;
+  margin-bottom: 51px;
+}
+
+.social-network {
+  display: inline-block;
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: color 0.3s ease;
+}
+
+.social-network+.social-network {
+  margin-left: 16px;
+}
+
+.social-network:hover {
+  color: $light-coral;
+}
+
+.copyright {
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: right;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+@include breakpoint-down(800px) {
+  .site__footer .container {
+    justify-content: space-between;
+  }
+
+  .footer__right {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 32px;
+  }
+
+
+
+  .social-networks {
+    margin-bottom: 0;
+    margin-right: 55px;
+  }
+}
+
+
+@include breakpoint-down(460px) {
+  .site__footer .container {
+    text-align: center;
+  }
+
+
+  .footer__left {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .footer__logo {
+    margin-bottom: 0;
+  }
+
+  .footer__nav {
+    margin-bottom: 24px;
+  }
+
+  .footer__nav .nav__list {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0;
+
+  }
+
+  .footer__nav .nav__item+.nav__item {
+    margin-left: 24px;
+  }
+
+  .footer__info {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer__right {
+    justify-content: center;
+  }
+
+  .social-networks {
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+
+}
